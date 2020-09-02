@@ -4,8 +4,8 @@ SERVICE := dl_pytorch
 SYSTEM_NETWORK := dl_pytorch
 
 build: create-networks
-	# @docker build --progress=plain -t $(IMAGE) -f docker/dockerfile . ;
-	@docker build --no-cache -t $(IMAGE) -f docker/dockerfile . ;
+	@docker build --progress=plain -t $(IMAGE) -f docker/dockerfile . ;
+	# @docker build --no-cache -t $(IMAGE) -f docker/dockerfile . ;
 
 shell: build
 	docker run --rm -it --init \
